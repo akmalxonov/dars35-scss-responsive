@@ -1,0 +1,51 @@
+header{
+    background-image: url(/assents/images/hero-bg2.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .hero{
+        background-image: url(/assents/images/hero-bg.png);
+        background-position: bottom;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        padding-top: 40px;
+        padding-bottom:529px;
+        h5{
+            font-family: "forum";
+            font-size: 25px;
+            font-weight: 400;
+            text-align: center;
+            color: #0C0B10;
+            line-height: 25px;
+            margin-bottom: 64px;
+        }
+        h1{
+            font-family: "forum";
+            color: white;
+            font-size: 198px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 138px;
+            text-transform: uppercase ;
+        }
+    }
+}
+@include mobile(){
+    header{
+        .hero{
+            background-size: 100%;
+            padding-top:75px;
+            padding-bottom:250px;
+            background-size: 180%;
+            h5{
+                font-size: 17px;
+                line-height: 16px;
+                margin-bottom: 30px;
+            }
+            h1{
+                font-size: 72px;
+                line-height: 47px;
+            }
+        }
+    }
+}

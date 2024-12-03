@@ -1,0 +1,12 @@
+.pins{
+    position: relative;
+    bottom: 1150px;
+    left: -3.2%;
+    z-index: 1;
+}
+@include mobile(){
+    .pins{
+        top: -570px;
+        left: 0;
+    }
+}

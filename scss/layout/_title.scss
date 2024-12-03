@@ -1,0 +1,20 @@
+.title{
+    img{
+        width: 589px;
+        height: 212px;
+        display: block;
+        margin: auto;
+        margin-top: -850px;
+        z-index: 99;
+        position: relative;
+    }
+}
+@include mobile(){
+    .title{
+       img{
+        width: 344px;
+        height: 162px;
+        margin-top:-10px;
+       }
+    }
+}

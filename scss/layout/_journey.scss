@@ -1,0 +1,208 @@
+.journey {
+    background-image: url(/assents/images/hero-bg1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    padding-top: 401px;
+    padding-bottom:105px;
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    h2{
+        font-family: "forum";
+        color: white;
+        font-size: 141px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 141px;
+        text-transform: uppercase ;
+        margin-bottom: 25px;
+        position: absolute;
+        top: 195px;
+        left: 36%;
+    }
+    .box{
+        position: absolute;
+        width: 280px;
+        height: 61px;
+        background-repeat: no-repeat;
+        background-image: url(/assents/icons/btn-line.svg);
+        background-size: cover;
+        left: 1.5%;
+        top: -60px;
+        margin: auto;
+        position: relative;
+        z-index: 99;
+        &::after{
+            content: url(/assents/icons/journey-icon.svg);
+            position: absolute;
+            top: -20px;
+            left: 41.5%;
+            width: 50px;
+        }
+    }
+    .journey-box{
+        position: relative;
+        position: absolute;
+        padding: 13px 46px;
+        border-radius: 67px;
+        background-color: white;
+        width: 332px;
+        margin: auto;
+        top: 355px;
+        left: 40%;
+        z-index: 99;
+        p {
+            font-family: "forum";
+            font-size: 25px;
+            font-weight: 400;
+            color: #79655E;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 4%;
+        }
+    }
+
+    .wrapper {
+        position: relative;
+        padding: 36px 22px 36px 40px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 18px 38px 0px #0000001C;
+        z-index: 50;
+        top: -74px;
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .j-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 75%;
+            li {
+                p {
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: #79655E;
+                    position: relative;
+                    &:nth-child(1)::before{
+                        content: url(/assents/icons/icon_destination.svg);
+                        position: absolute;
+                        left: -18px;
+                        top: 2px;
+                    }
+                }
+                &:nth-child(2) p:before{
+                    content: url(/assents/icons/icon_travel.svg);
+                    position: absolute;
+                    left: -20px;
+                    top: 2px;
+                }
+                &:nth-child(3) p:before{
+                    content: url(/assents/icons/icon_calendar.svg);
+                    position: absolute;
+                    left: -20px;
+                    top: 2px;
+                }
+                &:nth-child(4) p:before{
+                    content: url(/assents/icons/icon_travellers.svg);
+                    position: absolute;
+                    left: -20px;
+                    top: 2px;
+                }
+
+                h6 {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .btn{
+            padding: 23px;
+            font-size: 24px;
+            font-weight: 400;
+            border-radius: 121px;
+            background-color: #0C0B10;
+            color: white;
+            border: 1px solid black;
+            transition: 0.3s ease-in-out;
+            &:hover{
+                background-color:white ;
+                backdrop-filter: blur(10px);
+                color: black;
+            }
+        }
+    }
+}
+@include mobile(){
+    .journey{
+        padding-bottom:105px;
+        background-size: 200%;
+        background-position: center;
+        top:205px;
+        h2{
+            font-size: 72px;
+            line-height: 72px;
+            top: 125px;
+            left: 25%;
+        }
+        .box{
+            width: 270px;
+            height: 61px;
+            left: 0.2%;
+            top: -145px;
+
+            &::after{
+                top: -20px;
+                left: 41.5%;
+                width: 50px;
+            }
+        }
+        .journey-box{
+            padding: 13px 46px;
+            width: 312px;
+            top: 265px;
+            left: 8%;
+            p {
+                font-size: 25px;
+                font-weight: 400;
+            }
+        }
+        .wrapper {  
+            padding:32px 16px 42px 16px;
+            z-index: 50;
+            top: -170px;
+            .flex{
+                flex-direction: column;
+            }
+            .j-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 0 30px;
+                width: 90%;
+                li {
+                    margin-bottom: 24px;
+                    p {
+                        font-size: 18px;
+                    }
+                    h6 {
+                        font-size: 18px;
+                    }
+                }
+                li:nth-child(2){
+                    width: 100%;
+                }
+            }
+            .btn{
+                width: 100%;
+                margin: auto;
+                font-size: 24px;
+                font-family: "forum";
+            }
+        }
+    }
+}

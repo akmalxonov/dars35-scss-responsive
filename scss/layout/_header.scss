@@ -1,0 +1,119 @@
+header {
+    position: relative;
+    max-width: 1540px;
+    margin: auto;
+
+    .nav {
+        padding-top: 20px;
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .btn2 {
+                display: none;
+            }
+
+            .list {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+
+                .item {
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: "forum";
+                    height: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    transition: 0.3s ease-in-out;
+
+                    img {
+                        width: 18px;
+                        margin: auto;
+                        opacity: 0;
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    &:hover {
+                        img {
+                            opacity: 1;
+                        }
+
+                        color: black;
+                    }
+                }
+            }
+
+            .btn-div {
+                background-image: url(/assents/icons/btn-line.svg);
+                background-repeat: no-repeat;
+                position: relative;
+                &:hover .btn{
+                    color: white;
+                    backdrop-filter: blur(10px);
+                    border-radius: 20px;
+                }
+
+                &::after {
+                    content: url(/assents/icons/btn-t.svg);
+                    position: absolute;
+                    top: -16px;
+                    left: 42%;
+                }
+
+                &::before {
+                    content: url(/assents/icons/btn-b.svg);
+                    position: absolute;
+                    bottom: -14px;
+                    left: 42%;
+                }
+
+                .btn {
+                    margin: auto;
+                    border: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 8px 35px 12px 35px;
+                    background-color: rgba(240, 248, 255, 0);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+
+            .gamburger {
+                display: none;
+            }
+        }
+    }
+}
+
+@include mobile() {
+    header {
+        .nav {
+            .wrapper {
+                .btn2 {
+                    display: block;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 9px 12px;
+                    border: 1px solid white;
+                    border-radius: 61px;
+                    background-color: rgba(240, 248, 255, 0);
+                }
+
+                .list {
+                    display: none;
+                }
+
+                .gamburger {
+                    display: block;
+                }
+
+                .btn-div {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.nav-container{
+    width: 1348px;
+    margin: 0 auto;
+}
+@include mobile() {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        min-width: 374px;
+        // border: 1px solid red;
+        max-width: 571px;
+    }
+    .nav-container{
+        width: 100%;
+        padding: 0 15px;
+        min-width: 374px;
+        // border: 1px solid red;   
+        max-width: 571px;
+    }
+}
